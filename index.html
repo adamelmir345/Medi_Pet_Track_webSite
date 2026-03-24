@@ -5,6 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Medipatte - L'application de suivi médical pour vos animaux</title>
     
+    <!-- SEO & Partage Social (Open Graph) -->
+    <meta name="description" content="Découvrez Medipatte, le carnet de santé numérique et l'application de suivi médical la plus intuitive pour gérer la santé de votre chien, chat ou NAC.">
+    <meta property="og:title" content="Medipatte - Suivi Médical Animalier">
+    <meta property="og:description" content="Gérez facilement les traitements, vaccins et rappels de votre compagnon à quatre pattes.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://medipatte.com/"> <!-- L'URL de votre futur site -->
+    <meta property="og:image" content="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&q=80&w=1200">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐾</text></svg>">
+    
     <!-- Scripts & Styles -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -141,7 +152,7 @@
                 <span class="text-2xl group-hover:scale-110 transition-transform duration-300">🐾</span>
                 <span class="font-bold text-xl tracking-tight text-slate-800 group-hover:text-brand-500 transition-colors duration-300">Medipatte</span>
             </div>
-            <a href="#beta" class="bg-brand-500 text-white px-5 py-2.5 rounded-full text-sm font-medium hover:bg-brand-600 hover:scale-105 transition-all shadow-sm">
+            <a href="#beta" class="bg-brand-500 text-brand-900 px-5 py-2.5 rounded-full text-sm font-medium hover:bg-brand-600 hover:scale-105 transition-all shadow-sm">
                 Accès Bêta
             </a>
         </div>
@@ -186,63 +197,89 @@
                             <!-- Enoche (Notch) simulée -->
                             <div class="absolute top-3 left-1/2 -translate-x-1/2 w-32 h-6 bg-slate-900 rounded-b-xl z-20"></div>
 
-                            <div class="bg-slate-50 rounded-[2.2rem] overflow-hidden aspect-[9/19] flex flex-col relative">
+                            <div class="bg-white rounded-[2.2rem] overflow-hidden aspect-[9/19] flex flex-col relative px-5 pt-12 pb-5 font-sans">
                                 <!-- En-tête de l'application -->
-                                <div class="px-6 pt-14 pb-6 bg-white border-b border-slate-100/50 shadow-sm z-10 relative">
-                                    <div class="flex justify-between items-center">
-                                        <div>
-                                            <p class="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-1">Aujourd'hui</p>
-                                            <h3 class="text-2xl font-bold text-slate-900">2 traitements</h3>
-                                        </div>
-                                        <div class="w-12 h-12 bg-gradient-to-br from-brand-50 to-brand-100 rounded-full flex items-center justify-center text-2xl shadow-sm border border-white cursor-pointer hover:rotate-12 transition-transform">🐶</div>
-                                    </div>
-                                </div>
-                                
-                                <!-- Contenu de l'application (Scrollable mock) -->
-                                <div class="flex-1 p-5 space-y-4 overflow-hidden relative">
-                                    <!-- Tâche 1 -->
-                                    <div class="bg-white p-4 rounded-2xl shadow-sm border border-slate-100/80 flex items-center gap-4 transition-all duration-300 hover:shadow-md cursor-pointer group/card opacity-60">
-                                        <div class="w-12 h-12 rounded-full bg-brand-50 flex items-center justify-center text-brand-500 group-hover/card:scale-110 transition-transform">
-                                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
-                                        </div>
-                                        <div class="flex-1 text-left">
-                                            <h4 class="font-bold text-slate-400 line-through">Insuline</h4>
-                                            <p class="text-[11px] text-slate-400 mt-0.5">08:00 • Pris avec succès</p>
-                                        </div>
-                                    </div>
+                                <h2 class="text-xl font-bold text-brand-600 text-center mb-6 mt-2">Nouveau Traitement</h2>
+
+                                <button class="w-full flex items-center justify-center gap-2 py-3 px-2 border border-brand-500 bg-brand-50 text-brand-500 rounded-2xl text-[13px] font-semibold mb-6 hover:bg-brand-100 transition-colors shadow-sm">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8V5a2 2 0 012-2h3m13 5V5a2 2 0 00-2-2h-3M3 16v3a2 2 0 002 2h3m13-5v3a2 2 0 01-2 2h-3m-4-7a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                                    <span>Scanner une boîte ou ordonnance (IA)</span>
+                                </button>
+
+                                <div class="flex-1 overflow-y-auto scrollbar-none space-y-5 pb-2">
                                     
-                                    <!-- Tâche 2 -->
-                                    <div class="bg-white p-4 rounded-2xl shadow-apple border border-slate-100 flex items-center gap-4 relative overflow-hidden transition-all duration-300 hover:shadow-md hover:-translate-y-1 cursor-pointer group/card">
-                                        <div class="absolute left-0 top-0 bottom-0 w-1.5 bg-brand-500 group-hover/card:w-2 transition-all"></div>
-                                        <div class="w-12 h-12 rounded-full border-2 border-slate-200 flex items-center justify-center group-hover/card:border-brand-500 transition-colors"></div>
-                                        <div class="flex-1 text-left">
-                                            <h4 class="font-bold text-slate-800 text-lg">Antibiotique</h4>
-                                            <p class="text-[11px] text-brand-600 font-medium bg-brand-50 inline-block px-2 py-0.5 rounded-full mt-1">20:00 • 1 comprimé</p>
-                                        </div>
-                                        <div class="opacity-0 group-hover/card:opacity-100 transition-opacity text-slate-300">
-                                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                                    <!-- Pour qui ? -->
+                                    <div>
+                                        <p class="text-[13px] text-slate-500 mb-2 font-medium">Pour qui ?</p>
+                                        <div class="flex gap-3">
+                                            <div class="px-6 py-2 bg-brand-200 text-white font-bold rounded-full shadow-sm text-sm cursor-pointer whitespace-nowrap hover:scale-105 transition-transform">Rex</div>
+                                            <div class="px-6 py-2 bg-brand-50 text-brand-600 font-bold rounded-full text-sm cursor-pointer hover:bg-brand-100 transition-colors whitespace-nowrap border border-brand-50/50">Luna</div>
                                         </div>
                                     </div>
 
-                                    <!-- Dégradé pour masquer le bas -->
-                                    <div class="absolute bottom-0 left-0 w-full h-12 bg-gradient-to-t from-slate-50 to-transparent pointer-events-none"></div>
+                                    <!-- Inputs -->
+                                    <div class="space-y-3">
+                                        <div class="flex items-center gap-3 bg-brand-50/70 p-3.5 rounded-2xl text-slate-400">
+                                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101M10.172 13.828a4 4 0 015.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg>
+                                            <span class="text-sm font-medium">Nom du médicament</span>
+                                        </div>
+                                        <div class="flex items-center gap-3 bg-brand-50/70 p-3.5 rounded-2xl text-slate-400">
+                                            <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
+                                            <span class="text-sm font-medium truncate">Dosage (ex: 1 pilule)</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- Format -->
+                                    <div>
+                                        <p class="text-[13px] text-slate-500 mb-2 font-medium">Format</p>
+                                        <div class="flex flex-wrap gap-2">
+                                            <div class="flex items-center gap-1.5 px-3 py-1.5 bg-brand-100/60 text-brand-600 rounded-full text-xs font-bold cursor-pointer">
+                                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101"></path></svg>
+                                                Pilule
+                                            </div>
+                                            <div class="flex items-center gap-1.5 px-3 py-1.5 bg-slate-50 text-brand-600 rounded-full text-xs font-bold cursor-pointer hover:bg-slate-100 transition-colors">
+                                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2.69l5.66 5.66a8 8 0 11-11.31 0z"></path></svg>
+                                                Goutte
+                                            </div>
+                                            <div class="flex items-center gap-1.5 px-3 py-1.5 bg-slate-50 text-brand-600 rounded-full text-xs font-bold cursor-pointer hover:bg-slate-100 transition-colors">
+                                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547"></path></svg>
+                                                Seringue
+                                            </div>
+                                            <div class="flex items-center gap-1.5 px-3 py-1.5 bg-slate-50 text-brand-600 rounded-full text-xs font-bold cursor-pointer hover:bg-slate-100 transition-colors">
+                                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path></svg>
+                                                Autre
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Date & Heure -->
+                                    <div class="flex gap-3">
+                                        <div class="flex-1 bg-slate-50/70 p-3 rounded-2xl flex flex-col gap-1.5 border border-slate-50">
+                                            <div class="flex items-center gap-2 text-slate-400">
+                                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                                                <span class="text-[12px] font-medium">Date</span>
+                                            </div>
+                                            <div class="bg-brand-200 text-brand-900 py-1.5 px-2 rounded-xl text-center text-[13px] font-bold shadow-sm">
+                                                09/03/2026
+                                            </div>
+                                        </div>
+                                        <div class="flex-1 bg-slate-50/70 p-3 rounded-2xl flex flex-col gap-1.5 border border-slate-50">
+                                            <div class="flex items-center gap-2 text-slate-400">
+                                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                                <span class="text-[12px] font-medium">Heure</span>
+                                            </div>
+                                            <div class="bg-brand-200 text-brand-900 py-1.5 px-2 rounded-xl text-center text-[13px] font-bold shadow-sm">
+                                                22:27
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                
-                                <!-- Barre de navigation bas -->
-                                <div class="bg-white border-t border-slate-100/80 h-[84px] flex justify-around items-center px-6 absolute bottom-0 w-full pb-6 shadow-[0_-4px_24px_rgba(0,0,0,0.02)] z-20">
-                                    <div class="w-1/3 h-1.5 bg-slate-200 rounded-full absolute bottom-2 left-1/2 -translate-x-1/2"></div>
-                                    <div class="text-brand-500 transition-transform cursor-pointer flex flex-col items-center gap-1 group/nav">
-                                        <svg class="w-6 h-6 group-hover/nav:-translate-y-1 transition-transform" fill="currentColor" viewBox="0 0 24 24"><path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z"/></svg>
-                                        <div class="w-1 h-1 bg-brand-500 rounded-full"></div>
-                                    </div>
-                                    <div class="text-slate-300 transition-colors hover:text-slate-500 cursor-pointer flex flex-col items-center gap-1 group/nav">
-                                        <svg class="w-6 h-6 group-hover/nav:-translate-y-1 transition-transform" fill="currentColor" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
-                                        <div class="w-1 h-1 bg-transparent rounded-full"></div>
-                                    </div>
-                                    <div class="text-slate-300 transition-colors hover:text-slate-500 cursor-pointer flex flex-col items-center gap-1 group/nav">
-                                        <svg class="w-6 h-6 group-hover/nav:-translate-y-1 transition-transform" fill="currentColor" viewBox="0 0 24 24"><path d="M11 7h2v2h-2zm0 4h2v6h-2zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg>
-                                        <div class="w-1 h-1 bg-transparent rounded-full"></div>
-                                    </div>
+
+                                <!-- Submit Button -->
+                                <div class="pt-3 mt-auto relative z-10 bg-white">
+                                    <button class="w-full bg-brand-500 text-brand-900 font-bold py-3.5 rounded-2xl shadow-md hover:bg-brand-600 transition-colors text-sm hover:shadow-lg transform active:scale-95 duration-200">
+                                        Ajouter le traitement
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -268,7 +305,7 @@
                 <!-- Grille de fonctionnalités inspirée du composant React -->
                 <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
                     <div class="relative group overflow-hidden rounded-3xl col-span-1 md:col-span-2 aspect-[4/3] md:aspect-auto shadow-apple border border-slate-100">
-                        <img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&q=80&w=1200" alt="Chien heureux" class="object-cover w-full h-full transform group-hover:scale-105 transition-transform duration-700"/>
+                        <img loading=\"lazy\" src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&q=80&w=1200" alt="Chien heureux" class="object-cover w-full h-full transform group-hover:scale-105 transition-transform duration-700"/>
                         <div class="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/40 to-transparent flex flex-col justify-end p-8">
                             <h3 class="text-2xl font-bold text-white mb-2">Suivi Quotidien</h3>
                             <p class="text-brand-50 font-medium opacity-90">Des rappels précis pour chaque pilule, vaccin ou traitement.</p>
@@ -276,7 +313,7 @@
                     </div>
                     
                     <div class="relative group overflow-hidden rounded-3xl col-span-1 aspect-[4/3] md:aspect-auto shadow-apple border border-slate-100">
-                        <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&q=80&w=800" alt="Chat" class="object-cover w-full h-full transform group-hover:scale-105 transition-transform duration-700"/>
+                        <img loading=\"lazy\" src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&q=80&w=800" alt="Chat" class="object-cover w-full h-full transform group-hover:scale-105 transition-transform duration-700"/>
                         <div class="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/40 to-transparent flex flex-col justify-end p-6">
                             <h3 class="text-xl font-bold text-white mb-1">Multi-profils</h3>
                             <p class="text-blue-50 text-sm opacity-90 font-medium">Chien, chat, lapin...</p>
@@ -284,7 +321,7 @@
                     </div>
                     
                     <div class="relative group overflow-hidden rounded-3xl col-span-1 aspect-[4/3] md:aspect-auto shadow-apple border border-slate-100">
-                        <img src="https://images.unsplash.com/photo-1628009368231-7bb7cbcb8127?auto=format&fit=crop&q=80&w=800" alt="Vétérinaire" class="object-cover w-full h-full transform group-hover:scale-105 transition-transform duration-700"/>
+                        <img loading=\"lazy\" src="https://images.unsplash.com/photo-1628009368231-7bb7cbcb8127?auto=format&fit=crop&q=80&w=800" alt="Vétérinaire" class="object-cover w-full h-full transform group-hover:scale-105 transition-transform duration-700"/>
                         <div class="absolute inset-0 bg-gradient-to-t from-brand-900/95 via-brand-900/50 to-transparent flex flex-col justify-end p-6">
                             <h3 class="text-xl font-bold text-white mb-1">Dossier Santé</h3>
                             <p class="text-brand-100 text-sm font-medium">Partagez avec le véto.</p>
@@ -308,7 +345,7 @@
                             <div class="p-8 rounded-3xl border border-slate-100 shadow-lg shadow-brand-500/5 max-w-xs w-full bg-white transition-transform hover:scale-105 cursor-default">
                                 <p class="text-slate-600 text-sm mb-5 leading-relaxed">"Medipatte a changé notre vie. Mon chien n'oublie plus jamais ses médicaments pour le cœur. L'appli est fantastique."</p>
                                 <div class="flex items-center gap-3">
-                                    <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&auto=format&fit=crop" alt="Avatar" class="h-10 w-10 rounded-full object-cover shadow-sm">
+                                    <img loading=\"lazy\" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&auto=format&fit=crop" alt="Avatar" class="h-10 w-10 rounded-full object-cover shadow-sm">
                                     <div>
                                         <div class="font-medium text-slate-900 text-sm leading-none mb-1">Sophie & Max</div>
                                         <div class="text-[11px] text-slate-500">Parent de Chien</div>
@@ -319,7 +356,7 @@
                             <div class="p-8 rounded-3xl border border-slate-100 shadow-lg shadow-brand-500/5 max-w-xs w-full bg-white transition-transform hover:scale-105 cursor-default">
                                 <p class="text-slate-600 text-sm mb-5 leading-relaxed">"L'interface est super intuitive. Je peux partager le carnet de santé directement avec mon vétérinaire en un clic."</p>
                                 <div class="flex items-center gap-3">
-                                    <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=100&auto=format&fit=crop" alt="Avatar" class="h-10 w-10 rounded-full object-cover shadow-sm">
+                                    <img loading=\"lazy\" src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=100&auto=format&fit=crop" alt="Avatar" class="h-10 w-10 rounded-full object-cover shadow-sm">
                                     <div>
                                         <div class="font-medium text-slate-900 text-sm leading-none mb-1">Thomas</div>
                                         <div class="text-[11px] text-slate-500">Parent de Chat</div>
@@ -330,7 +367,7 @@
                             <div class="p-8 rounded-3xl border border-slate-100 shadow-lg shadow-brand-500/5 max-w-xs w-full bg-white transition-transform hover:scale-105 cursor-default">
                                 <p class="text-slate-600 text-sm mb-5 leading-relaxed">"L'historique des vaccins toujours dans la poche, c'est un vrai soulagement pour tous nos voyages."</p>
                                 <div class="flex items-center gap-3">
-                                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop" alt="Avatar" class="h-10 w-10 rounded-full object-cover shadow-sm">
+                                    <img loading=\"lazy\" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop" alt="Avatar" class="h-10 w-10 rounded-full object-cover shadow-sm">
                                     <div>
                                         <div class="font-medium text-slate-900 text-sm leading-none mb-1">Emma & Rocky</div>
                                         <div class="text-[11px] text-slate-500">Globetrotteuse</div>
@@ -342,7 +379,7 @@
                             <div class="p-8 rounded-3xl border border-slate-100 shadow-lg shadow-brand-500/5 max-w-xs w-full bg-white transition-transform hover:scale-105 cursor-default">
                                 <p class="text-slate-600 text-sm mb-5 leading-relaxed">"Medipatte a changé notre vie. Mon chien n'oublie plus jamais ses médicaments pour le cœur. L'appli est fantastique."</p>
                                 <div class="flex items-center gap-3">
-                                    <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&auto=format&fit=crop" alt="Avatar" class="h-10 w-10 rounded-full object-cover shadow-sm">
+                                    <img loading=\"lazy\" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&auto=format&fit=crop" alt="Avatar" class="h-10 w-10 rounded-full object-cover shadow-sm">
                                     <div>
                                         <div class="font-medium text-slate-900 text-sm leading-none mb-1">Sophie & Max</div>
                                         <div class="text-[11px] text-slate-500">Parent de Chien</div>
@@ -353,7 +390,7 @@
                             <div class="p-8 rounded-3xl border border-slate-100 shadow-lg shadow-brand-500/5 max-w-xs w-full bg-white transition-transform hover:scale-105 cursor-default">
                                 <p class="text-slate-600 text-sm mb-5 leading-relaxed">"L'interface est super intuitive. Je peux partager le carnet de santé directement avec mon vétérinaire en un clic."</p>
                                 <div class="flex items-center gap-3">
-                                    <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=100&auto=format&fit=crop" alt="Avatar" class="h-10 w-10 rounded-full object-cover shadow-sm">
+                                    <img loading=\"lazy\" src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=100&auto=format&fit=crop" alt="Avatar" class="h-10 w-10 rounded-full object-cover shadow-sm">
                                     <div>
                                         <div class="font-medium text-slate-900 text-sm leading-none mb-1">Thomas</div>
                                         <div class="text-[11px] text-slate-500">Parent de Chat</div>
@@ -364,7 +401,7 @@
                             <div class="p-8 rounded-3xl border border-slate-100 shadow-lg shadow-brand-500/5 max-w-xs w-full bg-white transition-transform hover:scale-105 cursor-default">
                                 <p class="text-slate-600 text-sm mb-5 leading-relaxed">"L'historique des vaccins toujours dans la poche, c'est un vrai soulagement pour tous nos voyages."</p>
                                 <div class="flex items-center gap-3">
-                                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop" alt="Avatar" class="h-10 w-10 rounded-full object-cover shadow-sm">
+                                    <img loading=\"lazy\" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop" alt="Avatar" class="h-10 w-10 rounded-full object-cover shadow-sm">
                                     <div>
                                         <div class="font-medium text-slate-900 text-sm leading-none mb-1">Emma & Rocky</div>
                                         <div class="text-[11px] text-slate-500">Globetrotteuse</div>
@@ -380,7 +417,7 @@
                             <div class="p-8 rounded-3xl border border-slate-100 shadow-lg shadow-brand-500/5 max-w-xs w-full bg-white transition-transform hover:scale-105 cursor-default">
                                 <p class="text-slate-600 text-sm mb-5 leading-relaxed">"Enfin une application qui comprend qu'on peut avoir des quarts de pilules à donner ! Tout est si facile."</p>
                                 <div class="flex items-center gap-3">
-                                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100&auto=format&fit=crop" alt="Avatar" class="h-10 w-10 rounded-full object-cover shadow-sm">
+                                    <img loading=\"lazy\" src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100&auto=format&fit=crop" alt="Avatar" class="h-10 w-10 rounded-full object-cover shadow-sm">
                                     <div>
                                         <div class="font-medium text-slate-900 text-sm leading-none mb-1">Marie</div>
                                         <div class="text-[11px] text-slate-500">Assistante Vétérinaire</div>
@@ -391,7 +428,7 @@
                             <div class="p-8 rounded-3xl border border-slate-100 shadow-lg shadow-brand-500/5 max-w-xs w-full bg-white transition-transform hover:scale-105 cursor-default">
                                 <p class="text-slate-600 text-sm mb-5 leading-relaxed">"Le multi-profil est génial. J'ai 3 chats et un chien, c'était un cauchemar de s'organiser avant Medipatte."</p>
                                 <div class="flex items-center gap-3">
-                                    <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=100&auto=format&fit=crop" alt="Avatar" class="h-10 w-10 rounded-full object-cover shadow-sm">
+                                    <img loading=\"lazy\" src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=100&auto=format&fit=crop" alt="Avatar" class="h-10 w-10 rounded-full object-cover shadow-sm">
                                     <div>
                                         <div class="font-medium text-slate-900 text-sm leading-none mb-1">Julien</div>
                                         <div class="text-[11px] text-slate-500">Famille nombreuse</div>
@@ -402,7 +439,7 @@
                             <div class="p-8 rounded-3xl border border-slate-100 shadow-lg shadow-brand-500/5 max-w-xs w-full bg-white transition-transform hover:scale-105 cursor-default">
                                 <p class="text-slate-600 text-sm mb-5 leading-relaxed">"Très pratique pour le suivi quotidien du diabète de Caramel. Et le design de l'appli est fantastique."</p>
                                 <div class="flex items-center gap-3">
-                                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&auto=format&fit=crop" alt="Avatar" class="h-10 w-10 rounded-full object-cover shadow-sm">
+                                    <img loading=\"lazy\" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&auto=format&fit=crop" alt="Avatar" class="h-10 w-10 rounded-full object-cover shadow-sm">
                                     <div>
                                         <div class="font-medium text-slate-900 text-sm leading-none mb-1">Lucas</div>
                                         <div class="text-[11px] text-slate-500">Parent de Chat</div>
@@ -413,7 +450,7 @@
                             <div class="p-8 rounded-3xl border border-slate-100 shadow-lg shadow-brand-500/5 max-w-xs w-full bg-white transition-transform hover:scale-105 cursor-default">
                                 <p class="text-slate-600 text-sm mb-5 leading-relaxed">"Enfin une application qui comprend qu'on peut avoir des quarts de pilules à donner ! Tout est si facile."</p>
                                 <div class="flex items-center gap-3">
-                                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100&auto=format&fit=crop" alt="Avatar" class="h-10 w-10 rounded-full object-cover shadow-sm">
+                                    <img loading=\"lazy\" src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100&auto=format&fit=crop" alt="Avatar" class="h-10 w-10 rounded-full object-cover shadow-sm">
                                     <div>
                                         <div class="font-medium text-slate-900 text-sm leading-none mb-1">Marie</div>
                                         <div class="text-[11px] text-slate-500">Assistante Vétérinaire</div>
@@ -424,7 +461,7 @@
                             <div class="p-8 rounded-3xl border border-slate-100 shadow-lg shadow-brand-500/5 max-w-xs w-full bg-white transition-transform hover:scale-105 cursor-default">
                                 <p class="text-slate-600 text-sm mb-5 leading-relaxed">"Le multi-profil est génial. J'ai 3 chats et un chien, c'était un cauchemar de s'organiser avant Medipatte."</p>
                                 <div class="flex items-center gap-3">
-                                    <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=100&auto=format&fit=crop" alt="Avatar" class="h-10 w-10 rounded-full object-cover shadow-sm">
+                                    <img loading=\"lazy\" src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=100&auto=format&fit=crop" alt="Avatar" class="h-10 w-10 rounded-full object-cover shadow-sm">
                                     <div>
                                         <div class="font-medium text-slate-900 text-sm leading-none mb-1">Julien</div>
                                         <div class="text-[11px] text-slate-500">Famille nombreuse</div>
@@ -435,7 +472,7 @@
                             <div class="p-8 rounded-3xl border border-slate-100 shadow-lg shadow-brand-500/5 max-w-xs w-full bg-white transition-transform hover:scale-105 cursor-default">
                                 <p class="text-slate-600 text-sm mb-5 leading-relaxed">"Très pratique pour le suivi quotidien du diabète de Caramel. Et le design de l'appli est fantastique."</p>
                                 <div class="flex items-center gap-3">
-                                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&auto=format&fit=crop" alt="Avatar" class="h-10 w-10 rounded-full object-cover shadow-sm">
+                                    <img loading=\"lazy\" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&auto=format&fit=crop" alt="Avatar" class="h-10 w-10 rounded-full object-cover shadow-sm">
                                     <div>
                                         <div class="font-medium text-slate-900 text-sm leading-none mb-1">Lucas</div>
                                         <div class="text-[11px] text-slate-500">Parent de Chat</div>
@@ -451,7 +488,7 @@
                             <div class="p-8 rounded-3xl border border-slate-100 shadow-lg shadow-brand-500/5 max-w-xs w-full bg-white transition-transform hover:scale-105 cursor-default">
                                 <p class="text-slate-600 text-sm mb-5 leading-relaxed">"Mon vétérinaire était impressionné par l'historique de suivi que je pouvais lui montrer lors des visites."</p>
                                 <div class="flex items-center gap-3">
-                                    <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=100&auto=format&fit=crop" alt="Avatar" class="h-10 w-10 rounded-full object-cover shadow-sm">
+                                    <img loading=\"lazy\" src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=100&auto=format&fit=crop" alt="Avatar" class="h-10 w-10 rounded-full object-cover shadow-sm">
                                     <div>
                                         <div class="font-medium text-slate-900 text-sm leading-none mb-1">Chloé</div>
                                         <div class="text-[11px] text-slate-500">Fière maîtresse</div>
@@ -462,7 +499,7 @@
                             <div class="p-8 rounded-3xl border border-slate-100 shadow-lg shadow-brand-500/5 max-w-xs w-full bg-white transition-transform hover:scale-105 cursor-default">
                                 <p class="text-slate-600 text-sm mb-5 leading-relaxed">"Fini les rappels et post-it illisibles sur le frigo ! Tout est propre dans l'app et je valide sur ma montre."</p>
                                 <div class="flex items-center gap-3">
-                                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&auto=format&fit=crop" alt="Avatar" class="h-10 w-10 rounded-full object-cover shadow-sm">
+                                    <img loading=\"lazy\" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&auto=format&fit=crop" alt="Avatar" class="h-10 w-10 rounded-full object-cover shadow-sm">
                                     <div>
                                         <div class="font-medium text-slate-900 text-sm leading-none mb-1">Antoine</div>
                                         <div class="text-[11px] text-slate-500">Geek & Papa Poule</div>
@@ -473,7 +510,7 @@
                             <div class="p-8 rounded-3xl border border-slate-100 shadow-lg shadow-brand-500/5 max-w-xs w-full bg-white transition-transform hover:scale-105 cursor-default">
                                 <p class="text-slate-600 text-sm mb-5 leading-relaxed">"L'interface est si agréable que c'est un pur plaisir de cocher les rappels chaque matin pour mon labrador."</p>
                                 <div class="flex items-center gap-3">
-                                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&auto=format&fit=crop" alt="Avatar" class="h-10 w-10 rounded-full object-cover shadow-sm">
+                                    <img loading=\"lazy\" src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&auto=format&fit=crop" alt="Avatar" class="h-10 w-10 rounded-full object-cover shadow-sm">
                                     <div>
                                         <div class="font-medium text-slate-900 text-sm leading-none mb-1">Sarah & Bella</div>
                                         <div class="text-[11px] text-slate-500">Parent de Chien</div>
@@ -484,7 +521,7 @@
                             <div class="p-8 rounded-3xl border border-slate-100 shadow-lg shadow-brand-500/5 max-w-xs w-full bg-white transition-transform hover:scale-105 cursor-default">
                                 <p class="text-slate-600 text-sm mb-5 leading-relaxed">"Mon vétérinaire était impressionné par l'historique de suivi que je pouvais lui montrer lors des visites."</p>
                                 <div class="flex items-center gap-3">
-                                    <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=100&auto=format&fit=crop" alt="Avatar" class="h-10 w-10 rounded-full object-cover shadow-sm">
+                                    <img loading=\"lazy\" src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=100&auto=format&fit=crop" alt="Avatar" class="h-10 w-10 rounded-full object-cover shadow-sm">
                                     <div>
                                         <div class="font-medium text-slate-900 text-sm leading-none mb-1">Chloé</div>
                                         <div class="text-[11px] text-slate-500">Fière maîtresse</div>
@@ -495,7 +532,7 @@
                             <div class="p-8 rounded-3xl border border-slate-100 shadow-lg shadow-brand-500/5 max-w-xs w-full bg-white transition-transform hover:scale-105 cursor-default">
                                 <p class="text-slate-600 text-sm mb-5 leading-relaxed">"Fini les rappels et post-it illisibles sur le frigo ! Tout est propre dans l'app et je valide sur ma montre."</p>
                                 <div class="flex items-center gap-3">
-                                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&auto=format&fit=crop" alt="Avatar" class="h-10 w-10 rounded-full object-cover shadow-sm">
+                                    <img loading=\"lazy\" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&auto=format&fit=crop" alt="Avatar" class="h-10 w-10 rounded-full object-cover shadow-sm">
                                     <div>
                                         <div class="font-medium text-slate-900 text-sm leading-none mb-1">Antoine</div>
                                         <div class="text-[11px] text-slate-500">Geek & Papa Poule</div>
@@ -506,7 +543,7 @@
                             <div class="p-8 rounded-3xl border border-slate-100 shadow-lg shadow-brand-500/5 max-w-xs w-full bg-white transition-transform hover:scale-105 cursor-default">
                                 <p class="text-slate-600 text-sm mb-5 leading-relaxed">"L'interface est si agréable que c'est un pur plaisir de cocher les rappels chaque matin pour mon labrador."</p>
                                 <div class="flex items-center gap-3">
-                                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&auto=format&fit=crop" alt="Avatar" class="h-10 w-10 rounded-full object-cover shadow-sm">
+                                    <img loading=\"lazy\" src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&auto=format&fit=crop" alt="Avatar" class="h-10 w-10 rounded-full object-cover shadow-sm">
                                     <div>
                                         <div class="font-medium text-slate-900 text-sm leading-none mb-1">Sarah & Bella</div>
                                         <div class="text-[11px] text-slate-500">Parent de Chien</div>
@@ -526,12 +563,12 @@
                         <h2 class="text-4xl font-bold text-slate-900 mb-4">L'avant-première Medipatte</h2>
                         <p class="text-slate-500 mb-8 max-w-lg mx-auto">Rejoignez la liste d'attente pour être parmi les premiers à profiter de l'expérience Medipatte.</p>
                         
-                        <form id="waitlist-form" class="max-w-md mx-auto flex flex-col sm:flex-row gap-3 relative" onsubmit="handleFormSubmit(event)">
-                            <input type="email" id="email-input" placeholder="Votre mail" required class="flex-1 px-6 py-4 rounded-full bg-slate-50 border border-slate-200 text-slate-900 placeholder-slate-400 focus:outline-none focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20 transition-all">
-                            <button type="submit" id="submit-btn" class="px-8 py-4 bg-brand-500 text-white font-bold rounded-full hover:bg-brand-600 transition-colors shadow-md hover:shadow-lg">
+                        <form id="waitlist-form" action="https://formspree.io/YOUR_FORM_ID" method="POST" class="max-w-md mx-auto flex flex-col sm:flex-row gap-3 relative" onsubmit="handleFormSubmit(event)">
+                            <input type="email" id="email-input" name="email" placeholder="Votre mail" required class="flex-1 px-6 py-4 rounded-full bg-slate-50 border border-slate-200 text-slate-900 placeholder-slate-400 focus:outline-none focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20 transition-all">
+                            <button type="submit" id="submit-btn" class="px-8 py-4 bg-brand-500 text-brand-900 font-bold rounded-full hover:bg-brand-600 transition-colors shadow-md hover:shadow-lg">
                                 S'inscrire
                             </button>
-                            <div id="success-msg" class="absolute inset-0 bg-brand-500 text-white font-bold rounded-full flex items-center justify-center opacity-0 pointer-events-none transition-opacity duration-300">
+                            <div id="success-msg" class="absolute inset-0 bg-brand-500 text-brand-900 font-bold rounded-full flex items-center justify-center opacity-0 pointer-events-none transition-opacity duration-300">
                                 <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
                                 Vous êtes sur la liste !
                             </div>
